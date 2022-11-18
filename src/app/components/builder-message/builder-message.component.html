@@ -1,0 +1,15 @@
+<app-sidebar></app-sidebar>
+
+<div (click)="closeSidebar()" class="builder-message-container" appBuilderZoom>
+    <ng-container *ngFor="let item of builderMessageItems$ | async" [dataItem]="item" appDynamicItems> </ng-container>
+</div>
+
+<app-create-builder-item></app-create-builder-item>
+
+<div class="builder-message-zoom">
+    <button class="button-action builder-message-zoom__button">+</button>
+    <div class="builder-message-zoom__mouse__action">
+        <div class="builder-message-zoom__wheel__action"></div>
+    </div>
+    <button class="button-action builder-message-zoom__button">-</button>
+</div>

@@ -1,0 +1,36 @@
+.send-message-image {
+
+    border: 2px dashed #ccc;
+    border-radius: 15px;
+    cursor: pointer;
+    height: 140px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+
+    &:hover {
+        border-color: #2C8BC2;
+      }
+}
+
+.send-message-image__upload {
+
+    cursor: pointer;
+    text-align: center;
+    height: 18px;
+    float: left;
+    transition: border-color 0.15s;
+    will-change: border-color;
+    position: relative;
+    min-height: 175px;
+    width: 100%;
+    color: #8492a6;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

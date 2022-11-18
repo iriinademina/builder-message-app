@@ -1,0 +1,21 @@
+
+<div (click)=" openSidebarItems($event)" #sendMessageId [attr.data-send-message-id]="dataItem.uuid" appDragDrop class="builder-item-wrapper">
+    <div class="builder-item-wrapper__actions">
+        <button class="button-action">
+            <i class="far fa-clone"></i>
+        </button>
+        <button (click)="removeItem()" class="button-action button-action-trash">
+            <i class="far fa-trash-alt"></i>
+        </button>
+    </div>
+    <div class="builder-item-wrapper__header">
+        <div class="builder-item-wrapper__drag-circle"></div>
+        Send Message
+    </div>
+    <div class="builder-item-wrapper__body">
+        <app-send-message-child
+        [widgetItems]="dataItem.widgetItems"
+        ></app-send-message-child>
+    </div>
+</div>
+

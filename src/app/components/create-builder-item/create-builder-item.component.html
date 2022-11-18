@@ -1,0 +1,16 @@
+<div class="create-builder-item__container">
+    <button class="create-builder-item__button" (click)="toogleList()" [ngClass]="{ 'active-button': isOpen }">
+        <i class="fas fa-plus"></i>
+    </button>
+    <ul *ngIf="isOpen" class="create-builder-item__list" (click)="toogleList()">
+        <li>test</li>
+        <li class="item-list__message" (click)="createSendMessageItem()">
+            <img src="../../../assets/images/send_message.svg" />
+            Send message
+        </li>
+        <li class="item-list__randomizer" (click)="createRandomizerItem()">
+            <img src="../../../assets/images/randomizer.svg" />
+            Randomizer
+        </li>
+    </ul>
+</div>

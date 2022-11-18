@@ -1,0 +1,31 @@
+.child-items-randomizer-container {
+    padding: 0;
+}
+
+.randomizer-item-turquoise {
+    color: #5E418F;
+}
+
+.randomizer-item-blue {
+    color: #2C8BC2;
+}
+
+.randomizer-item {
+    padding: 12px 60px 12px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e0e6ed;
+    position: relative;
+
+    & > i {
+        position: absolute;
+        top: 16px;
+        right: -11px;
+        font-size: 22px;
+        background: #ffffff;
+        border-radius: 50%;
+        transition: all 0.1s linear;
+    }
+
+}

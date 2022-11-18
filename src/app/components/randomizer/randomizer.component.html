@@ -1,0 +1,14 @@
+<div #randomizerId [attr.data-randomizer-id]="dataItem.uuid" appDragDrop class="builder-item-wrapper">
+    <div class="builder-item-wrapper__actions">
+        <button class="button-action">
+            <i class="far fa-clone"></i>
+        </button>
+        <button (click)="removeItem()" class="button-action button-action-trash">
+            <i class="far fa-trash-alt"></i>
+        </button>
+    </div>
+    <div class="builder-item-wrapper__header randomizer-wrapper__header">Randomizer</div>
+    <div class="builder-item-wrapper__body builder-item-randomizer__body">
+        <app-randomizer-child [randomizerItemData]="dataItem.widgetItems[0]"></app-randomizer-child>
+    </div>
+</div>

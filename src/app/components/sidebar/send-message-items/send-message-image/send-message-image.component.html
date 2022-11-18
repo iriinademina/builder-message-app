@@ -1,0 +1,20 @@
+<div class="send-message-text__container position-relative space-bottom-item">
+    <div class="send-message-image position-relative">
+       <label class="send-message-image__upload">
+        <i class="far fa-image"></i>
+        <span>Image</span>
+        <input type="file" accept="image/*"/>
+       </label>
+    </div>
+    <div class="sidebar-items-actions">
+        <button (click)="removeItem()" class="sidebar-items-actions__trash">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="sidebar-items-actions__drag-drop">
+            <i class="fas fa-arrows-alt-v"></i>
+        </button>
+        <button (click)="cloneItem()">
+            <i class="far fa-clone"></i>
+        </button>
+    </div>
+</div>

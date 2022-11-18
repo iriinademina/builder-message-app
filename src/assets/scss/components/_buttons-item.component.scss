@@ -1,0 +1,94 @@
+.builder-message-buttons-container {
+    position: relative;
+
+    .add-button {
+        width: 100%;
+        background: transparent;
+        border: 2px dashed #e0e6ed;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        padding: 6px;
+        color: #8492a6;
+        border-top: 2px dashed transparent;
+        outline: none;
+        box-shadow: none;
+
+        &:hover {
+            border-color: #2c8bc2;
+            color: #2c8bc2;
+        }
+    }
+
+    .buttons-item-content {
+        display: flex;
+        justify-content: space-between;
+        border: 2px solid #e0e6ed;
+        border-top: 2px solid transparent;
+        overflow: hidden;
+
+        &:hover {
+            border-color: #2c8bc2;
+
+            .buttons-item-content__trash {
+                display: flex;
+            }
+        }
+
+        .buttons-item-content__trash {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: -38px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+
+            & > i {
+                color: #ff6249;
+                cursor: pointer;
+            }
+        }
+
+        .buttons-item-content__name {
+            padding: 7px 7px 7px 15px;
+            width: calc(100% - 70px);
+            text-align: center;
+            position: relative;
+
+            & > input {
+                outline: none;
+                border: none;
+                text-align: center;
+                color: #2c8bc2;
+            }
+        }
+
+        .buttons-item-content__link {
+            padding: 7px;
+            border-left: 1px solid #e0e6ed;
+            width: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            &.next {
+                &:hover {
+                    background: #2c8bc2;
+
+                    & > .fa-chevron-right {
+                        color: #ffffff;
+                    }
+                }
+            }
+
+            & > .fa-circle {
+                color: #e0e6ed;
+            }
+
+            & > .fa-chevron-right {
+                color: rgba(0, 132, 255, 0.5);
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.send-message-text__container {
+    width: 100%;
+    padding: 0 30px 0 30px;
+
+    &:hover {
+        .sidebar-items-actions {
+          display: flex;
+        }
+      }
+
+    .send-message-text__text {
+        margin-bottom: -6px;
+        position: relative;
+
+        & > textarea {
+            width: 100%;
+            background: #f1f0f0;
+            min-height: 60px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            border: 2px solid transparent;
+            color: #3c4858;
+            height: auto;
+            padding: 8px 10px;
+            outline: none;
+            font-size: 16px;
+            resize: none;
+         
+            &:hover {
+                border-color: #2c8bc2;
+            }
+
+            &:focus,
+            &:active {
+                border-color: #13ce66;
+            }
+        }
+    }
+}
+
+.position-relative {
+    position: relative;
+}

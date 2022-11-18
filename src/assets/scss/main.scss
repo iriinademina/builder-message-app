@@ -1,0 +1,61 @@
+@import './components/send-message-child.component';
+@import './components/builder-message.component';
+@import './components/create-builder-item.component';
+@import './components/builder-item.component';
+@import './components/randomizer-child.component';
+@import './components/sidebar.component';
+@import './components/send-message-text.component';
+@import './components/send-message-items.component';
+@import './components/buttons-item.component';
+@import './components/send-message-child-text.component';
+
+@import './components/send-message-image.component';
+@import './components/send-message-card.component';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    //font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.button-action {
+    background: #ffffff;
+    border: none;
+    border-radius: 0;
+    padding: 10px 14px;
+    cursor: pointer;
+    color: #5f5f5f;
+    outline: none;
+    box-shadow: none;
+}
+
+.button-action-trash {
+    color: #ff6249;
+}
+
+.button-action:hover {
+    background: #ebebeb;
+}
+
+input[type='file'] {
+    z-index: 999;
+    line-height: 0;
+    position: absolute;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    left: -154px;
+    cursor: pointer;
+}

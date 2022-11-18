@@ -1,0 +1,22 @@
+<div class="builder-message-buttons-container">
+    <ng-container #vc></ng-container>
+    <button *ngIf=" templateRefs.length-1 < maxCountButtons" class="add-button" (click)="addNewButton()">+ Add button</button>
+</div>
+
+<ng-template #content let-id="id" let-number="number">
+    <div class="buttons-item-content">
+        <div class="buttons-item-content__trash">
+            <i (click)="removeNewButton(id)" class="fas fa-times"></i>
+        </div>
+        <div class="buttons-item-content__name">
+            <input type="text" 
+             placeholder="Enter button name" 
+             [ngModel]= "textButton + number"
+             (ngModelChange)="changeNameButton($event)"
+             />
+        </div>
+        <div class="buttons-item-content__link">
+            <i class="far fa-circle"></i>
+        </div>
+    </div>
+</ng-template>

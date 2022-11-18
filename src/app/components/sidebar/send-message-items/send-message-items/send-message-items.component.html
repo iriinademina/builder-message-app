@@ -1,0 +1,56 @@
+<div class="sidebar-title">
+  <input type="text" placeholder="Enter name" />
+</div>
+
+<div class="sidebar-start-action">
+  <div class="sidebar-start-action__toggler">
+    <input class="toggler-input" type="checkbox" id="toggler" />
+    <label class="toggler-label" for="toggler">Start</label>
+  </div>
+</div>
+
+<div class="send-message-items-content">
+  <ng-container *ngIf="sendMessageItems$ | async as sendMessageItems">
+    <div *ngFor="let item of sendMessageItems">
+      <div *ngIf="item?.type === textItem">
+        <app-send-message-text [dataTextItemProps]="item"> </app-send-message-text>
+      </div>
+
+      <div *ngIf="item?.type === imageItem">
+        <app-send-message-image> </app-send-message-image>
+      </div>
+
+      <div *ngIf="item?.type === cardItem">
+        <app-send-message-card> </app-send-message-card>
+      </div>
+    </div>
+  </ng-container>
+
+  <div class="send-message-items-created-container">
+    <div class="send-message-items-created__rows">
+      <div
+        (click)="addSendMessageItem(textItem)"
+        class="send-message-item-created"
+      >
+        <i class="fas fa-align-left"></i>
+        <span>+ Text</span>
+      </div>
+
+      <div
+        (click)="addSendMessageItem(imageItem)"
+        class="send-message-item-created"
+      >
+        <i class="far fa-image"></i>
+        <span>+ Image</span>
+      </div>
+
+      <div
+        (click)="addSendMessageItem(cardItem)"
+        class="send-message-item-created"
+      >
+        <i class="fas fa-stop"></i>
+        <span>+ Card</span>
+      </div>
+    </div>
+  </div>
+</div>

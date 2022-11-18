@@ -1,0 +1,52 @@
+<div class="send-message-text__container position-relative space-bottom-item">
+    <div class="send-message-card position-relative">
+        <div class="send-message-card__content position-relative">
+            <div class="send-message-card__items">
+                <div class="send-message-card__items-container">
+                    <div class="prev-card-items">
+                        <button class="button-step">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+
+                    <div class="card-image-container">
+                        <label class="send-message-image__upload">
+                            <i class="far fa-image"></i>
+                            <span>Image</span>
+                            <input type="file" accept="image/*" />
+                        </label>
+                    </div>
+
+                    <div class="card-text-container position-relative">
+                        <div class="card-text">
+                            <input type="text" placeholder="Enter title ..." />
+                        </div>
+                        <div class="card-text">
+                            <textarea placeholder="Enter your subtitle ..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="next-card-items">
+                        <button class="button-step">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="sidebar-items-actions">
+                        <button (click)="removeItem()" class="sidebar-items-actions__trash">
+                            <i class="fas fa-times"></i>
+                        </button>
+                        <button class="sidebar-items-actions__drag-drop">
+                            <i class="fas fa-arrows-alt-v"></i>
+                        </button>
+                        <button>
+                            <i class="far fa-clone"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <app-buttons-item></app-buttons-item>
+            </div>
+        </div>
+    </div>
+</div>

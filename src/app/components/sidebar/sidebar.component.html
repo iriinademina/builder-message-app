@@ -1,0 +1,19 @@
+<ng-container *ngIf="openedSidebarData$ | async as openedSidebarData">
+    <div
+        class="builder-message-sidebar"
+        #sidebar
+        [ngClass]="{
+            active: isOpen 
+        }">
+        >
+        <div class="builder-message-sidebar__container">
+            <ng-container *ngIf="openedSidebarData.type !== isEmpty">
+                <app-send-message-items></app-send-message-items>
+                <ng-container #viewItems></ng-container>
+            </ng-container>
+        </div>
+        <div class="builder-sidebar__open__tab">
+            <i (click)="toggleMenu()" class="fas fa-chevron-right"></i>
+        </div>
+    </div>
+</ng-container>

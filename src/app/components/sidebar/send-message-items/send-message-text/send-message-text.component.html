@@ -1,0 +1,19 @@
+<div class="send-message-text__container position-relative space-bottom-item">
+    <div class="send-message-text__text">
+        <textarea placeholder="Text"></textarea>
+    </div>
+
+    <app-buttons-item ></app-buttons-item>
+
+    <div class="sidebar-items-actions">
+        <button (click)="removeItem()" class="sidebar-items-actions__trash">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="sidebar-items-actions__drag-drop">
+            <i class="fas fa-arrows-alt-v"></i>
+        </button>
+        <button (click)="cloneItem()">
+            <i class="far fa-clone"></i>
+        </button>
+    </div>
+</div>
